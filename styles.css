@@ -1,0 +1,25 @@
+body {
+    background-color: #4A628A;
+    margin-left: 50px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+/* HEADER */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.header .logo {
+    max-width: 200px;
+}
+
+.header .menu {
+    max-width: 10px;
+    height: auto;
+    cursor: pointer;
+}
