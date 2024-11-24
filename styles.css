@@ -36,8 +36,6 @@ body {
     cursor: pointer;   
 }
 
-/* GEOGRAPHY SECTION */
-
 .title {
     align-items: center;
     text-align: center;
@@ -45,7 +43,11 @@ body {
     color: #DFF2EB;
     border-bottom: 2px solid #DFF2EB;
     box-sizing: border-box;
+    padding-bottom: 20px;
 }
+
+/* GEOGRAPHY SECTION */
+
 .geography {
     /* background-color: #001F3F; */
     display: flex;
@@ -142,3 +144,5 @@ body {
     font-size: 50px;
     color: whitesmoke;
 }
+
+/* NYC */
