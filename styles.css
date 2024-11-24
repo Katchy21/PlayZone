@@ -146,3 +146,71 @@ body {
 }
 
 /* NYC */
+.nyc {
+    width: 100%;
+    padding: 10px;
+}
+
+.nyc .row {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.nyc .row img{
+    width: 60%;
+    height: auto;
+    display: block;
+}
+
+.nyc .image {
+    flex: 1;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row.full-width .image {
+    flex: 100%;
+    align-items: center;
+}
+
+/* ANIME */
+.anime {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.anime .row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+.anime .image {
+    flex: 0 0 50%;
+    text-align: center;
+}
+
+.anime .image .left {
+    justify-content: flex-start;
+}
+
+.anime .image .right {
+    justify-content: flex-end;
+}
+
+.anime .image img {
+    max-width: 80%;
+    max-height: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.anime .spacer {
+    flex: 1 0 50%; 
+}
