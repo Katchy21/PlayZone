@@ -43,6 +43,8 @@ body {
     text-align: center;
     font-size: 60px;
     color: #DFF2EB;
+    border-bottom: 2px solid #DFF2EB;
+    box-sizing: border-box;
 }
 .geography {
     /* background-color: #001F3F; */
@@ -93,4 +95,50 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+/* MUSIC */
+
+.music {
+    /* background-color: #001F3F; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.music .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.music .image {
+    flex: 7;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.music img {
+    width:400px;
+    height: 400px;
+}
+
+.music p {
+    display: flex;
+    justify-content: center;
+}
+
+.music .column {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.music p {
+    flex: 13;
+    font-size: 50px;
+    color: whitesmoke;
 }
