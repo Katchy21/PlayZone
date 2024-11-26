@@ -36,12 +36,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Info button functionality
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll('.image-info').forEach(infoButton => {
+    document.querySelectorAll('.image-info1').forEach(infoButton => {
         infoButton.addEventListener('click', (event) => {
             event.stopPropagation(); // Prevent the click from bubbling up to the anchor tag
             event.preventDefault(); // Prevent the anchor tag's default behavior (navigation)
-            
+
             const row = infoButton.closest('.row');
+            row.classList.toggle('active'); // Toggle the class to reveal text and slide the image
+        });
+    });
+    
+    document.querySelectorAll('.image a').forEach(anchor => {
+        anchor.addEventListener('click', (event) => {
+            if (!event.target.closest('.image-info')) {
+                return; // Allow the anchor to work normally if the image (not the info button) is clicked
+            }
+            event.preventDefault(); // Prevent the default link behavior if the info button was clicked
+        });
+    });
+
+
+
+    document.querySelectorAll('.image-info2').forEach(infoButton => {
+        infoButton.addEventListener('click', (event) => {
+            event.stopPropagation(); // Prevent the click from bubbling up to the anchor tag
+            event.preventDefault(); // Prevent the anchor tag's default behavior (navigation)
+
+            const row = infoButton.closest('.column');
             row.classList.toggle('active'); // Toggle the class to reveal text and slide the image
         });
     });
