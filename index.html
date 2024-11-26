@@ -10,12 +10,18 @@
 <body>
     <header class="header">
         <img class="logo" src="Templates/images/Katchy_PlayZonelogo.png"/>
-        <div class="box">
-        <img class="menu" src="Templates/images/menu.png"/>
+        <div id="box" class="box">
+            <img class="menu" src="Templates/images/menu.png"/>
+            <div id="menu" class="dropdown hidden">
+                <a href="#geography">Geography🌍</a>
+                <a href="#music">Music🎵</a>
+                <a href="#nyc">NYT Games📰</a>
+                <a href="#anime">Anime🌸</a>
+            </div>
         </div>
     </header>
-    <h2 class="title">Geography🌍</h2>
-    <div class="geography">
+    <h2 id="geography" class="title">Geography🌍</h2>
+    <div  class="geography">
         <div class="left">
             <div class="row">
                 <div class="image">
@@ -40,7 +46,7 @@
             <img id="globe-gif" class="globe" src="Templates/images/globe-spinning-unscreen.gif" />
         </div>
     </div>
-    <h2 class="title">Music🎵</h2>
+    <h2 id="music" class="title">Music🎵</h2>
     <div class="music">
         <div class="row">
             <div class="column">
@@ -57,7 +63,7 @@
             </div>
         </div>
     </div>
-    <h2 class="title">NYTimes Games📰</h2>
+    <h2 id="nyc" class="title">NYTimes Games📰</h2>
     <div class="nyc">
         <div class="row">
             <div class="image">
@@ -73,20 +79,26 @@
             </div>
         </div>
     </div>
-    <h2 class="title">Anime🌸</h2>
+    <h2 id="anime" class="title">Anime🌸</h2>
     <div class="anime">
         <div class="row">
             <div class="image left">
                 <img src="Templates/images/mangadle.webp">
             </div>
-            <div class="image spacer"></div>
+            <div class="image spacer">
+                <p>Guess the character in a different mangas</p>
+            </div>
         </div>
         <div class="row">
-            <div class="image spacer"></div>
+            <div class="image spacer">
+                <p>THE ONE PIECE IS REAL</p>
+            </div>
             <div class="image right">
                 <img src="Templates/images/onepiecedle2.jpg">
             </div>
         </div>
     </div>
+    
 </body>
+    <script src="script.js"></script>
 </html>
