@@ -83,5 +83,19 @@ document.querySelector('.sound-container').addEventListener('click', (event) => 
         const soundPath = event.target.dataset.sound;
         const audio = new Audio(soundPath);
         audio.play();
-    }
-})
+    };
+});
+
+// Jumping letters
+
+const letters = document.querySelectorAll('#wordle span');
+
+letters.forEach(letter => {
+    letter.addEventListener('mouseover', () => {
+        letter.classList.add('jumping');
+        setTimeout(() => {
+            letter.classList.remove('jumping');
+        }, 300);
+    });
+});
+

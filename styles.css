@@ -330,12 +330,70 @@ body {
     display: flex;
     margin-bottom: 20px;
     align-items: center;
+    justify-content: center;
+    height: 450px;
+}
+
+.nyc .row:last-child{
+    background-color: white;
+    flex-direction: column;
+}
+
+.nyc .row:last-child h3 {
+    font-size: 300%;
+}
+
+
+
+.nyc a {
+    text-decoration: none;
+}
+
+.nyc #wordle {
+    display: flex;
+    font-size: 150px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.nyc #wordle span {
+    display: inline-block;
+    background-color: #6aaa64;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0 20px;
+    transition: transform 0.3s ease, top 0.3s ease;
+    position: relative;
+}
+
+.nyc #wordle span.jumping {
+    animation: jump 0.3s ease forwards;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-50px);
+    }
 }
 
 .nyc .row img{
-    width: 60%;
-    height: auto;
+    width: 100%;
+    height: 100%;
     display: block;
+}
+
+.nyc .image a {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s;
 }
 
 .nyc .image {
@@ -344,11 +402,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    width: 60%;
 }
 
-.row.full-width .image {
-    flex: 100%;
+.nyc .blackbox {
+    position: absolute;
+    width: 5.2%;
+    height: 14.3%;
+    background-color: black;
+    display: flex;
     align-items: center;
+    justify-content: center;
+    transform: rotate(45deg);
+    transition: all 0.5s ease; 
+}
+
+.nyc .blackbox.right{
+    top: 30.188%;
+    right: 44.4%;
+}
+
+.nyc .blackbox.left{
+    top: 30.188%;
+    left: 44.2%;
+}
+
+.nyc .row a:hover ~ .right{
+    right: 30%;
+}
+
+.nyc .row a:hover ~ .left{
+    left: 30%;
+}
+
+.nyc .row .image.first a:hover {
+    opacity:0.8;
 }
 
 /* ANIME */
