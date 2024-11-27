@@ -77,4 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 })
 
-// Site go to 
+// Playing sounds
+document.querySelector('.sound-container').addEventListener('click', (event) => {
+    if(event.target.tagName === "IMG" && event.target.dataset.sound) {
+        const soundPath = event.target.dataset.sound;
+        const audio = new Audio(soundPath);
+        audio.play();
+    }
+})

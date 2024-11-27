@@ -199,12 +199,34 @@ body {
 /* MUSIC */
 
 .music {
-    background-color: #001F3F; 
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    height: 1000px;
+}
+
+.music .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.music .sound-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 20px;
+    gap: 20px;
 }
 
 .music .row:first-child {
@@ -214,19 +236,10 @@ body {
     flex:1;
 }
 
-.music .row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
-    width: 100%;
-    margin-bottom: 20px;
-    gap: 20px;
-}
-
 .music .image {
     padding-right: 20px;
     display: flex;
+    height: 35%;
     justify-content: center;
     position: relative;
     transition: transform 0.5s ease;
@@ -235,6 +248,19 @@ body {
 
 .music .column.active .image {
     transform: translateY(-30%);
+}
+
+.music p {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    margin: 0px 200px;
+    top: 170%;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 50px;
+    color: whitesmoke;
+    transition: opacity 0.5s ease, visibility 0s 0s;
 }
 
 .music .column.active p {
@@ -251,12 +277,6 @@ body {
 .music img {
     width: 350px;
     height: 350px;
-}
-
-.music p {
-    display: flex;
-    justify-content: center;
-    position: absolute;
 }
 
 .music .column {
@@ -283,21 +303,18 @@ body {
     transition: opacity 0.3s ease; 
 }
 
-.music p {
-    opacity: 0;
-    visibility: hidden;
-    font-size: 50px;
-    color: whitesmoke;
-    transition: opacity 0.5s ease, visibility 0s 0s;
-}
-
 
 .music .icon {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+.music .icon:hover {
+    transform: scale(1.1);
+}
 .music .icon img{
     width: 50%;
     height: 50%;
