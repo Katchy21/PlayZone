@@ -99,3 +99,25 @@ letters.forEach(letter => {
     });
 });
 
+// Cycling through words
+
+document.addEventListener('DOMContentLoaded', function() {
+    const words = document.querySelectorAll('#geography .cycling-text .word');
+    let currentIndex = 0;
+
+    function cycleWords() {
+         // Remove the 'active' class from the previous word
+         words[currentIndex].classList.remove('active');
+        
+         // Move to the next word, wrapping around if necessary
+         currentIndex = (currentIndex + 1) % words.length;
+         
+         // Add the 'active' class to the next word
+         words[currentIndex].classList.add('active');
+    }
+
+    setInterval(cycleWords, 2000);
+    
+    // Initialize the first word
+    words[currentIndex].classList.add('active');
+})

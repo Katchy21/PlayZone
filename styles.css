@@ -103,10 +103,6 @@ body {
     justify-content: center;
 }
 
-.geography .right {
-    flex: 1;
-}
-
 .geography .row {
     margin-bottom: 20px;
     display: flex;
@@ -116,6 +112,10 @@ body {
     height: 300px;
     position: relative;
     transition: all 0.5s ease;
+}
+
+.geography .row.middle {
+    margin-left: 50px;
 }
 
 .geography .image {
@@ -128,6 +128,30 @@ body {
     overflow: hidden;
 }
 
+.geography h3 {
+    margin: 0;
+    display: inline-block;
+    font-size: 100px;
+    color: #D4EBF8; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    font-family: 'Arial', sans-serif; 
+    text-align: center; 
+    transition: all 0.5s;
+}
+.geography .arrow {
+    color:#D4EBF8;
+    position: relative;
+    top: -10px;
+}
+.geography h3:hover {
+    color: #DFF2EB; 
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7); 
+}
+
+.geography a {
+    text-decoration: none;
+    display: inline-block;
+}
 .geography .image a {
     display: block; 
     width: 100%;
@@ -139,7 +163,7 @@ body {
     height: 300px;
     object-fit: cover;
     opacity: 1;
-    
+    border-radius: 50px;
 }
 
 .geography .image-info1 {
@@ -156,7 +180,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     opacity: 1;
-    transition: opacity 0.3s ease; 
+    transition: opacity 0.5s ease; 
 }
 
 .geography .image-info1:hover {
@@ -174,9 +198,16 @@ body {
 
     transition: opacity 0.5s ease;
     
+    background-color: #10142c;
+    padding: 20px;
+    border-radius: 20px;
+}
+.geography span {
+    color: #6aaa64;
+    font-weight: bold;
 }
 .geography .row.active .image {
-    transform: translateX(-80%);
+    transform: translateX(-40%);
 }
 
 .geography .row.active p {
@@ -184,18 +215,55 @@ body {
     opacity: 1;
 }
 
-.geography .right {
-    position: relative;
-    overflow: hidden;
+.geography .row.active h3 {
+    visibility: hidden;
+    opacity: 0;
 }
 
-.geography .right img{
-    width: 100%;
+.geography .background {
+    color: #D4EBF8;
+    background-color: #10142c;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+
+.geography .right {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     height: 100%;
+}
+
+
+
+.geography .right img{
+    flex: 1;
+    width: 100%;
     object-fit: cover;
     display: block;
 }
 
+#geography .cycling-text .word {
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+#geography .cycling-text .word.active {
+    opacity: 1;
+}
+
+#geography {
+    position: relative;
+    padding-right: 300px;
+}
 /* MUSIC */
 
 .music {
