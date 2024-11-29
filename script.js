@@ -102,22 +102,28 @@ letters.forEach(letter => {
 // Cycling through words
 
 document.addEventListener('DOMContentLoaded', function() {
-    const words = document.querySelectorAll('#geography .cycling-text .word');
-    let currentIndex = 0;
+    const geo_words = document.querySelectorAll('#geography .cycling-text .word');
+    const music_words = document.querySelectorAll('#music .cycling-text .word');
+    let currentIndexg = 0; //index for geography
+    let currentIndexm = 0; //index for music
 
     function cycleWords() {
-         // Remove the 'active' class from the previous word
-         words[currentIndex].classList.remove('active');
+        // Remove the 'active' class from the previous word
+        geo_words[currentIndexg].classList.remove('active');
+        music_words[currentIndexm].classList.remove('active');
         
-         // Move to the next word, wrapping around if necessary
-         currentIndex = (currentIndex + 1) % words.length;
+        // Move to the next word, wrapping around if necessary
+        currentIndexg = (currentIndexg + 1) % geo_words.length;
+        currentIndexm = (currentIndexm + 1) % music_words.length;
          
-         // Add the 'active' class to the next word
-         words[currentIndex].classList.add('active');
+        // Add the 'active' class to the next word
+        geo_words[currentIndexg].classList.add('active');
+        music_words[currentIndexm].classList.add('active');
     }
 
     setInterval(cycleWords, 2000);
     
     // Initialize the first word
-    words[currentIndex].classList.add('active');
+    geo_words[currentIndexg].classList.add('active');
+    music_words[currentIndexm].classList.add('active');
 })
