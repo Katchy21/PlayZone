@@ -104,6 +104,7 @@ letters.forEach(letter => {
 document.addEventListener('DOMContentLoaded', function() {
     const geo_words = document.querySelectorAll('#geography .cycling-text .word');
     const music_words = document.querySelectorAll('#music .cycling-text .word');
+    const imgs = document.querySelectorAll('.anime .image.right img');
     let currentIndexg = 0; //index for geography
     let currentIndexm = 0; //index for music
 
@@ -111,6 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Remove the 'active' class from the previous word
         geo_words[currentIndexg].classList.remove('active');
         music_words[currentIndexm].classList.remove('active');
+        imgs[currentIndexm].classList.remove('active');
         
         // Move to the next word, wrapping around if necessary
         currentIndexg = (currentIndexg + 1) % geo_words.length;
@@ -119,6 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // Add the 'active' class to the next word
         geo_words[currentIndexg].classList.add('active');
         music_words[currentIndexm].classList.add('active');
+        imgs[currentIndexm].classList.add('active');
     }
 
     setInterval(cycleWords, 2000);
@@ -126,4 +129,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the first word
     geo_words[currentIndexg].classList.add('active');
     music_words[currentIndexm].classList.add('active');
+    imgs[currentIndexm].classList.add('active');
 })
