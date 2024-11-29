@@ -408,6 +408,7 @@ body {
     font-size: 16px;
     opacity: 1;
     transition: opacity 0.3s ease; 
+    border-radius: 20px;
 }
 
 .music .image-info2:hover {
@@ -461,15 +462,15 @@ body {
 }
 
 .nyc .row:last-child{
-    background-color: white;
+    background-color: #10142c;
     flex-direction: column;
+    border-radius: 50px;
 }
 
 .nyc .row:last-child h3 {
     font-size: 300%;
+    color: white;
 }
-
-
 
 .nyc a {
     text-decoration: none;
