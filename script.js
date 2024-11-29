@@ -131,3 +131,31 @@ document.addEventListener('DOMContentLoaded', function() {
     music_words[currentIndexm].classList.add('active');
     imgs[currentIndexm].classList.add('active');
 })
+
+
+// Open all games
+
+document.querySelector('.logo').addEventListener('click', function() {
+    const links = [
+        "https://www.flagle.io/" ,
+        "https://worldle.teuteuf.fr",
+        "https://globle-game.com/game",
+        "https://bandle.app",
+        "https://lessgames.com/songless",
+        "https://www.nytimes.com/games/connections",
+        "https://www.nytimes.com/crosswords",
+        "https://www.nytimes.com/games/wordle/index.html",
+        "https://mangadle.net",
+        "https://onepiecedle.net",
+        "https://colorfle.com",
+        "https://timeguessr.com",
+        "https://loldle.net"
+    ];
+
+    links.forEach((link, index) => {
+        setTimeout(() => {
+            console.log("open: " + link);
+            window.open(link, '_blank');
+        }, index * 1000);
+    });
+});
